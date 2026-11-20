@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tu tienda online funcionando en 10 días | Mentorium</title>
+<meta name="description" content="Este Black Friday nuestro equipo monta tu tienda online con 5 productos ganadores y sus anuncios. Creada y funcionando en 10 días o te devolvemos el dinero.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#08080b">
+<link rel="icon" href="assets/isotipo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFFFFF;--soft:#F3F1EA;--ink:#101013;--muted:#55534d;--line:#DEDBD2;
+--gold:#D4A017;--gold-hi:#F5D96D;--gold-ink:#7E5E08;--black:#08080b;--card:#131317;--on-black:#f3f1ea;--black-muted:#aeaba2;--black-line:#2a2a33;
+--grad:linear-gradient(45deg,#D4A017 0%,#F5D96D 100%);
+--sans:"Inter","Helvetica Neue",Arial,sans-serif;--serif:"Fraunces",Georgia,serif;color-scheme:light;box-sizing:border-box}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--gold-ink)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--gold-hi);outline-offset:3px}
+.wrap{width:min(1040px,100% - 40px);margin-inline:auto;position:relative}
+.doc{width:min(720px,100% - 40px);margin-inline:auto}
+h1,h2,h3,h4{font-family:var(--sans);letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1,h2{font-weight:800;line-height:1.06}
+h3{font-weight:800;line-height:1.15;font-size:clamp(26px,3.6vw,34px);margin:68px 0 16px}
+h3::before{content:"";display:block;width:44px;height:3px;background:var(--gold);margin-bottom:16px}
+h4{font-size:20px;font-weight:700;margin:26px 0 6px;letter-spacing:-.01em}
+em{font-optical-sizing:none;font-variation-settings:"opsz" 18}
+em{font-family:var(--serif);font-style:italic;font-weight:600;letter-spacing:0}
+h3 em{display:inline-block}
+p{margin:0 0 1em}
+.muted{color:var(--muted)}
+img{max-width:100%;height:auto;display:block}
+
+.hero{position:relative;overflow:hidden;background:var(--black);color:var(--on-black);padding:34px 0 120px}
+.hero .wrap{z-index:1}
+.hero .logo{width:min(220px,56vw);margin-bottom:56px}
+.hgrid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;align-items:center}
+.javi{margin:0;text-align:center}
+.javi img{width:100%;border-radius:14px;border:1px solid var(--black-line)}
+.javi figcaption{margin-top:10px;font-size:14px;color:var(--black-muted)}
+.javi figcaption b{color:#fff}
+.hero .gar{font-size:clamp(22px,2.8vw,30px);font-weight:800;color:var(--gold-hi);margin:16px 0 0;letter-spacing:-.01em;line-height:1.2}
+.nota{display:block;margin-top:12px;font-size:14.5px;line-height:1.45;color:var(--muted);max-width:46ch}
+.hero .nota,.agenda .nota{color:var(--black-muted)}
+.mark{position:absolute;right:-30px;top:-20px;width:min(380px,64vw);opacity:.07;pointer-events:none}
+.kicker{display:flex;align-items:center;gap:14px;font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);margin:0 0 22px}
+.kicker::before{content:"";width:44px;height:3px;background:var(--gold-hi);flex:none}
+.hero h1{font-size:clamp(30px,5.6vw,64px);max-width:17ch;color:#fff}
+.hero h1 em{color:var(--gold-hi);white-space:nowrap}
+.hero .sub{font-size:clamp(17px,2vw,20px);line-height:1.55;color:var(--black-muted);max-width:56ch;margin:28px 0 0}
+.btn{display:inline-block;padding:18px 30px;background:var(--grad);color:#101013;font-family:var(--sans);font-weight:800;font-size:15.5px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:8px;box-shadow:0 10px 30px -12px rgba(212,160,23,.7);transition:transform .18s ease,filter .18s ease}
+.btn:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.waves{position:absolute;left:0;right:0;bottom:0;width:100%;height:130px;pointer-events:none}
+
+.days{list-style:none;padding:0;margin:22px 0;border-left:2px solid var(--line)}
+.days li{position:relative;padding:0 0 22px 26px}
+.days li::before{content:"";position:absolute;left:-7px;top:11px;width:12px;height:12px;border-radius:50%;background:var(--gold)}
+.days b{font-weight:700;font-size:21px;display:block;line-height:1.3;margin-bottom:2px;letter-spacing:-.01em}
+.days .bf{display:inline-block;margin-top:8px;padding:4px 10px;border:1.5px solid var(--gold);color:var(--gold-ink);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;border-radius:4px}
+
+table.stack{width:100%;border-collapse:collapse;margin:22px 0 0;font-size:16.5px}
+.stack th,.stack td{text-align:left;vertical-align:top;padding:14px 14px 14px 0;border-bottom:1px solid var(--line);line-height:1.45}
+.stack thead th{font-size:14px;color:var(--gold-ink);font-weight:800;letter-spacing:.1em;text-transform:uppercase;border-bottom:3px solid var(--ink)}
+.stack td b{font-weight:700}
+.stack td:first-child{width:34%}
+.stack .bonus td:first-child b::after{content:attr(data-e);display:block;margin-top:3px;font-size:13.5px;font-weight:800;color:var(--gold-ink);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+
+.price{position:relative;overflow:hidden;margin:34px 0;padding:34px;background:var(--grad);color:#101013;border-radius:12px}
+.price .was{font-size:16.5px;margin:0 0 6px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.price .now{font-weight:800;font-size:clamp(50px,9vw,82px);line-height:1;letter-spacing:-.03em;margin:0 0 16px}
+.price .now small{font-size:.28em;font-weight:700;letter-spacing:0;margin-left:10px}
+.price ul{margin:0;padding-left:1.2em}
+.price li{font-size:17.5px;line-height:1.55;margin-bottom:4px;font-weight:500}
+.guarantee{margin:30px 0;padding:28px 30px;background:var(--soft);border-left:5px solid var(--gold);border-radius:4px}
+.guarantee h4{margin-top:0;font-size:24px;line-height:1.2}
+.guarantee p:last-child{margin-bottom:0}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;margin-top:12px}
+.two-col ul,.doc>ul{padding-left:1.2em;margin:0}
+.doc>ul li,.two-col li{margin-bottom:.45em}
+.two-col h4{margin-top:8px}
+.faq h4{margin-top:24px}
+.faq p{margin:0}
+.agenda{margin:30px 0 0;padding:32px;background:var(--black);color:var(--on-black);border-radius:12px}
+.agenda h4{margin:0 0 10px;font-size:28px;color:#fff}
+.agenda h4::before{content:"";display:block;width:44px;height:3px;background:var(--gold-hi);margin-bottom:16px}
+.agenda p{margin:0 0 22px;color:var(--black-muted)}
+
+.band{position:relative;overflow:hidden;background:var(--black);color:var(--on-black);margin-top:64px;padding:66px 0 130px}
+.band .wrap{z-index:1}
+.band h2{font-size:clamp(32px,5.4vw,56px);max-width:20ch;color:#fff}
+.band h2 em{color:var(--gold-hi);display:block}
+.band .lede{font-size:clamp(17px,2vw,19px);max-width:64ch;color:var(--black-muted);margin:20px 0 0;line-height:1.6}
+.vs{margin:38px 0 0;border-top:1px solid var(--black-line)}
+.vs>div{display:grid;grid-template-columns:170px 1fr 1fr;gap:20px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--black-line)}
+.vs .cab{padding:12px 0;font-size:13.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--black-muted)}
+.vs .cab span:last-child{color:var(--gold-hi)}
+.vs b{font-weight:700;font-size:19px;line-height:1.3;color:#fff}
+.vs span{font-size:16.5px;line-height:1.45;color:var(--black-muted)}
+.vs strong{font-size:17.5px;line-height:1.45;font-weight:700;color:var(--gold-hi)}
+.three{padding-left:1.2em;margin:0 0 1em}
+.three li{margin-bottom:.7em}
+.need{padding-left:1.2em;margin:0 0 1em}
+.need li{margin-bottom:.45em}
+.tag{display:inline-block;margin-top:24px;padding:9px 16px;border:1.5px solid var(--gold-hi);color:var(--gold-hi);font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;border-radius:4px}
+
+footer{margin-top:84px;padding:34px 0 56px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px;line-height:1.6}
+footer p{margin:0 0 .8em}
+footer a{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;margin:-14px 0}
+
+@media (max-width:900px){
+  .hgrid{grid-template-columns:1fr;gap:0}
+  .javi{order:-1;display:flex;align-items:center;gap:12px;text-align:left;margin:0 0 18px}
+  .javi img{width:64px;height:64px;object-fit:cover;object-position:50% 50%;border-radius:50%}
+  .javi figcaption{margin:0}
+}
+@media (max-width:760px){.two-col{grid-template-columns:1fr}}
+@media (max-width:640px){
+  body{font-size:17px}
+  .hero{padding-bottom:100px}
+  .hero{padding-top:24px}
+  .hero .logo{margin-bottom:28px;width:min(180px,50vw)}
+  .kicker{font-size:13px;margin-bottom:14px;letter-spacing:.12em}
+  .kicker::before{width:28px}
+  .btn{padding:16px 22px;font-size:14px}
+  .vs .cab{display:none}
+  .vs>div{grid-template-columns:1fr;gap:4px}
+  .vs [data-l]::before{content:attr(data-l);display:block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--black-muted)}
+  .vs strong[data-l]::before{color:var(--gold-hi)}
+  .price .now small{display:block;margin:10px 0 0;font-size:19px;line-height:1.3}
+  .price,.agenda,.guarantee{padding:22px}
+  .stack thead{display:none}
+  .stack tr{display:block;padding:12px 0;border-bottom:1px solid var(--line)}
+  .stack th,.stack td{display:block;width:auto !important;border:0;padding:3px 0}
+  .stack td[data-l]::before{content:attr(data-l);display:block;font-size:14px;font-weight:800;color:var(--gold-ink)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <img class="mark" src="assets/isotipo.png" width="420" height="518" alt="" aria-hidden="true">
+  <div class="wrap">
+    <img class="logo" src="assets/logo.png" width="840" height="126" alt="Mentorium">
+    <div class="hgrid">
+      <div>
+        <p class="kicker">Black Friday: esto no lo hacemos nunca</p>
+        <h1>Tu tienda online funcionando en <em>solo 10 días</em> con la ayuda de la IA.</h1>
+        <p class="gar">Si no, te devolvemos tu dinero.</p>
+        <p style="margin:28px 0 0"><a class="btn" href="https://api.leadconnectorhq.com/widget/booking/Dv3JH8A3BSLSMrakqyGr?utm_source=base_datos&amp;utm_campaign=tienda10dias">Reserva tu llamada</a><span class="nota">Llamada de 45 minutos con el equipo de Mentorium. Eliges día y hora y contestas unas preguntas antes de confirmar.</span></p>
+        <p class="sub">Este Black Friday nuestro equipo técnico monta tu tienda en el nicho que elijas con nosotros, con 5 productos ganadores. Nuestro bot crea tus anuncios y un mentor la revisa contigo antes de activarla.</p>
+      </div>
+      <figure class="javi"><picture><source media="(max-width:900px)" srcset="assets/javi-cara.jpg"><img src="assets/javi.jpg" width="640" height="800" alt="Javi Sánchez, mentor de Mentorium"></picture><figcaption><b>Javi Sánchez</b> · Mentorium</figcaption></figure>
+    </div>
+  </div>
+  <svg class="waves" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="#F5D96D" stroke-width="1.2"><path opacity="0.10" d="M0 150 C 200 60, 380 230, 600 140 S 1000 70, 1200 150"/><path opacity="0.17" d="M0 162 C 200 82, 380 216, 600 150 S 1000 90, 1200 158"/><path opacity="0.24" d="M0 174 C 200 104, 380 202, 600 160 S 1000 110, 1200 166"/><path opacity="0.31" d="M0 186 C 200 126, 380 188, 600 170 S 1000 130, 1200 174"/><path opacity="0.38" d="M0 198 C 200 148, 380 174, 600 180 S 1000 150, 1200 182"/><path opacity="0.45" d="M0 210 C 200 170, 380 160, 600 190 S 1000 170, 1200 190"/></g></svg>
+</header>
+<main>
+<div class="doc">
+  <p style="margin-top:56px">Quieres vender por internet, pero la tienda no está montada. Llevas tiempo dándole vueltas: qué vendo, cómo se monta, cómo se hacen los anuncios. Y mientras lo piensas, no hay tienda y no hay ventas.</p>
+  <p>El enemigo tiene nombre: el «empiezo cuando lo tenga claro». Una tienda no se aclara pensando. Se aclara cuando está abierta, con productos dentro y anuncios delante de gente real.</p>
+
+  <h3>Por qué <em>ahora</em> es el mejor momento</h3>
+  <p>Porque este Black Friday hacemos algo que no hacemos nunca: la tienda no te la enseñamos a montar, te la montamos nosotros.</p>
+</div>
+
+<section class="band" aria-labelledby="ahora-titulo">
+  <svg class="waves" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="#F5D96D" stroke-width="1.2"><path opacity="0.10" d="M0 150 C 200 60, 380 230, 600 140 S 1000 70, 1200 150"/><path opacity="0.17" d="M0 162 C 200 82, 380 216, 600 150 S 1000 90, 1200 158"/><path opacity="0.24" d="M0 174 C 200 104, 380 202, 600 160 S 1000 110, 1200 166"/><path opacity="0.31" d="M0 186 C 200 126, 380 188, 600 170 S 1000 130, 1200 174"/><path opacity="0.38" d="M0 198 C 200 148, 380 174, 600 180 S 1000 150, 1200 182"/><path opacity="0.45" d="M0 210 C 200 170, 380 160, 600 190 S 1000 170, 1200 190"/></g></svg>
+  <div class="wrap">
+    <h2 id="ahora-titulo">Este Black Friday la tienda <em>te la montamos nosotros</em></h2>
+    <p class="lede">Lo que normalmente tendrías que hacer tú, frente a lo que hacemos por ti esta vez.</p>
+    <div class="vs">
+      <div class="cab"><span></span><span>Lo normal</span><span>Este Black Friday</span></div>
+      <div><b>La tienda</b><span data-l="Lo normal">Aprendes a montarla y la montas tú.</span><strong data-l="Este Black Friday">Nuestro equipo técnico te la crea y la activa, con 5 productos ganadores.</strong></div>
+      <div><b>Los anuncios</b><span data-l="Lo normal">Los creas tú desde cero.</span><strong data-l="Este Black Friday">Nuestro bot crea los vídeos y las fotos de tus productos.</strong></div>
+      <div><b>Tu primera publicidad</b><span data-l="Lo normal">La pagas tú desde el primer día.</span><strong data-l="Este Black Friday">Te regalamos 100 $ para iniciarla.</strong></div>
+    </div>
+    <span class="tag">Esto nunca lo hacemos. Solo por Black Friday</span>
+  </div>
+</section>
+
+<div class="doc">
+  <h3>Qué te llevas en estos <em>10 días</em></h3>
+  <p>Una tienda en Shopify, en el nicho que has elegido, con 5 productos ganadores dentro, con sus anuncios creados y revisada por un mentor antes de activarla.</p>
+  <p>No es solo un curso: la tienda la monta nuestro equipo técnico. Y no te quedas solo con ella: te enseñamos a llevarla y te acompañamos durante 6 meses.</p>
+
+  <h3>Así lo hacemos, día por día</h3>
+  <ol class="days">
+    <li><b>Día 1: eliges nicho y productos</b>Consultoría personalizada 1:1. Escogemos contigo el nicho que más se adapta a tu perfil y a tus objetivos. Eliges un nombre y te das de alta en Shopify.</li>
+    <li><b>Días 2 y 3: montamos tu tienda</b>Nuestro equipo técnico crea y activa la tienda en el nicho que has escogido, con 5 productos ganadores.<br><span class="bf">Esto nunca lo hacemos. Solo por Black Friday</span></li>
+    <li><b>Días 4 a 6: tu publicidad para captar clientes</b>Nuestro bot crea tus anuncios: vídeos y fotos de tus productos. Un curso paso a paso para publicarlos en redes sociales. Otro curso paso a paso para publicarlos con publicidad en Facebook o Google. Y una sesión de mentoría con un experto para revisar tu tienda antes de activarla.</li>
+    <li><b>Días 7 a 10: activas tu tienda y empiezas a recibir clientes</b>Dos mentorías de estrategia de ventas semanal. Y coaching 1:1 de desbloqueo: si por alguna razón algo no te está funcionando, te damos consultoría 1:1 para destrabarlo.</li>
+    <li><b>Después: 6 meses de optimización</b>3 mentorías a la semana para ir revisando tus números y ayudarte a escalar tu tienda hacia tus objetivos. Jamás te dejamos solo. Y acceso en nuestra plataforma a estrategias de escalado de ventas: optimización de Facebook Ads, retargeting y multiplataforma (Google, TikTok y Pinterest).</li>
+  </ol>
+
+  <h3>Dónde se atasca quien empieza solo</h3>
+  <ul class="three">
+    <li><strong>No sabe qué vender.</strong> Da vueltas a nichos y productos y no se decide. Por eso el día 1 lo escogemos contigo, en una consultoría 1:1.</li>
+    <li><strong>Se pelea con la tecnología.</strong> Montar la tienda se le hace cuesta arriba y la deja a medias. Por eso esta vez la monta nuestro equipo técnico.</li>
+    <li><strong>No sabe hacer los anuncios.</strong> Sin anuncios no entra nadie en la tienda. Por eso nuestro bot los crea, tú aprendes a publicarlos y un experto revisa la tienda antes de activarla.</li>
+  </ul>
+  <p>Y cuando algo no funciona, no te quedas atascado: tienes coaching 1:1 de desbloqueo y 6 meses de mentorías.</p>
+
+  <h3>Todo lo que <em>incluye</em></h3>
+  <table class="stack">
+    <thead><tr><th>Qué recibes</th><th>Para qué te sirve</th></tr></thead>
+    <tbody>
+      <tr><td><b>Consultoría personalizada 1:1</b></td><td>Para escoger contigo el nicho que más se adapta a tu perfil y a tus objetivos.</td></tr>
+      <tr class="bonus"><td><b data-e="solo Black Friday">Tu tienda montada con 5 productos ganadores</b></td><td>Nuestro equipo técnico la crea y la activa. No tienes que saber montarla.</td></tr>
+      <tr><td><b>Anuncios creados por nuestro bot</b></td><td>Vídeos y fotos de tus productos, listos para publicar.</td></tr>
+      <tr><td><b>Curso paso a paso de redes sociales</b></td><td>Cómo publicar tus anuncios en redes sociales.</td></tr>
+      <tr><td><b>Curso paso a paso de Facebook o Google</b></td><td>Cómo publicarlos con publicidad en Facebook o Google.</td></tr>
+      <tr><td><b>Mentoría con experto antes de activar</b></td><td>Revisamos tu tienda contigo antes de abrirla.</td></tr>
+      <tr><td><b>Dos mentorías de estrategia de ventas semanal</b></td><td>Para los días en que la tienda ya está activa y empiezan a llegar clientes.</td></tr>
+      <tr><td><b>Coaching 1:1 de desbloqueo</b></td><td>Si algo no te está funcionando, consultoría 1:1 para destrabarlo.</td></tr>
+      <tr><td><b>6 meses de optimización</b><br>3 mentorías a la semana</td><td>Para revisar tus números y escalar tu tienda hacia tus objetivos.</td></tr>
+      <tr><td><b>Estrategias de escalado en nuestra plataforma</b></td><td>Optimización de Facebook Ads, retargeting y multiplataforma: Google, TikTok y Pinterest.</td></tr>
+      <tr class="bonus"><td><b data-e="regalo">100 $ para tu primera publicidad</b></td><td>Para iniciar tu publicidad y vender tus primeros productos.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>El esfuerzo, <em>puesto en perspectiva</em></h3>
+  <p>Esto no es sin esfuerzo: vas a trabajar. Pero no vas a trabajar a ciegas ni solo.</p>
+  <table class="stack">
+    <thead><tr><th></th><th>Por tu cuenta</th><th>Con Mentorium</th></tr></thead>
+    <tbody>
+      <tr><td><b>Nicho y productos</b></td><td data-l="Por tu cuenta">Los eliges solo, a prueba y error</td><td data-l="Con Mentorium">Los eliges con un consultor, 1:1</td></tr>
+      <tr><td><b>La tienda</b></td><td data-l="Por tu cuenta">La montas tú, aprendiendo sobre la marcha</td><td data-l="Con Mentorium">La monta nuestro equipo técnico en los días 2 y 3</td></tr>
+      <tr><td><b>Los anuncios</b></td><td data-l="Por tu cuenta">Los creas tú desde cero</td><td data-l="Con Mentorium">Los crea nuestro bot y tú aprendes a publicarlos</td></tr>
+      <tr><td><b>Antes de abrir</b></td><td data-l="Por tu cuenta">La revisas tú solo</td><td data-l="Con Mentorium">Un mentor experto revisa la tienda contigo</td></tr>
+      <tr><td><b>Después</b></td><td data-l="Por tu cuenta">Lo resuelves tú solo</td><td data-l="Con Mentorium">6 meses con 3 mentorías a la semana</td></tr>
+    </tbody>
+  </table>
+
+  <div class="price">
+    <p class="was">Regalo de Black Friday</p>
+    <p class="now">100 $<small>para tu primera publicidad</small></p>
+    <ul>
+      <li>Para iniciar tu publicidad y vender tus primeros productos.</li>
+      <li>Y la tienda te la monta nuestro equipo técnico.</li>
+    </ul>
+  </div>
+
+  <h3>Nuestra <em>garantía</em></h3>
+  <div class="guarantee">
+    <h4>Tu tienda online creada y funcionando en 10 días y si no te devolvemos el dinero.</h4>
+  </div>
+  <p style="margin:36px 0 0"><a class="btn" href="https://api.leadconnectorhq.com/widget/booking/Dv3JH8A3BSLSMrakqyGr?utm_source=base_datos&amp;utm_campaign=tienda10dias">Reserva tu llamada</a><span class="nota">Llamada de 45 minutos con el equipo de Mentorium. Eliges día y hora y contestas unas preguntas antes de confirmar.</span></p>
+
+  <h3>Qué necesitamos de ti</h3>
+  <p>Nosotros montamos la tienda y creamos los anuncios. Tú pones esto:</p>
+  <ul class="need">
+    <li>Venir el día 1 a la consultoría 1:1 y escoger con nosotros el nicho.</li>
+    <li>Elegir un nombre para tu tienda y darte de alta en Shopify.</li>
+    <li>Revisar la tienda con el experto antes de activarla.</li>
+    <li>Venir a las mentorías.</li>
+  </ul>
+  <div class="two-col">
+    <div>
+      <h4>Es para ti si…</h4>
+      <ul>
+        <li>Quieres tener tu tienda online y todavía no la tienes.</li>
+        <li>Prefieres que un equipo la monte contigo a pelearte solo con la tecnología.</li>
+        <li>Quieres tu tienda funcionando en 10 días.</li>
+        <li>Quieres aprender a llevarla, no solo tenerla.</li>
+      </ul>
+    </div>
+    <div>
+      <h4>No es para ti si…</h4>
+      <ul>
+        <li>Buscas resultados sin trabajar.</li>
+        <li>Quieres que alguien lo haga todo sin tu participación.</li>
+        <li>No quieres mentorías ni acompañamiento.</li>
+        <li>Buscas que te prometan ingresos. Eso no lo prometemos.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Preguntas frecuentes</h3>
+  <div class="faq">
+    <h4>No sé nada de tecnología.</h4>
+    <p>No hace falta. La tienda la crea y la activa nuestro equipo técnico, y los anuncios los crea nuestro bot. Tú aprendes a llevarla con los cursos paso a paso y las mentorías.</p>
+    <h4>No sé qué vender.</h4>
+    <p>Es lo primero que hacemos contigo. El día 1 escogemos el nicho que más se adapta a tu perfil, y la tienda sale con 5 productos ganadores.</p>
+    <h4>¿Y si a los 10 días la tienda no está creada y funcionando?</h4>
+    <p>Te devolvemos el dinero.</p>
+    <h4>¿Y si me atasco?</h4>
+    <p>Tienes coaching 1:1 de desbloqueo: si por alguna razón algo no te está funcionando, te damos consultoría 1:1 para destrabarlo.</p>
+    <h4>¿Qué pasa después del día 10?</h4>
+    <p>Empiezan 6 meses de optimización, con 3 mentorías a la semana para revisar tus números y ayudarte a escalar.</p>
+  </div>
+
+  <h3>Esto no lo hacemos nunca. <em>Solo por Black Friday</em></h3>
+  <p>Hablamos de que nuestro equipo técnico cree y active tu tienda por ti.</p>
+  <p>Si quieres la tuya, reserva tu llamada. Te contamos cómo funciona y resolvemos tus dudas.</p>
+  <div class="agenda" id="agenda">
+    <h4>Reserva tu llamada</h4>
+    <p>Elige día y hora en el calendario.</p>
+    <a class="btn" href="https://api.leadconnectorhq.com/widget/booking/Dv3JH8A3BSLSMrakqyGr?utm_source=base_datos&amp;utm_campaign=tienda10dias">Reserva tu llamada</a><span class="nota">Llamada de 45 minutos con el equipo de Mentorium. Eliges día y hora y contestas unas preguntas antes de confirmar.</span>
+  </div>
+</div>
+</main>
+<footer>
+  <div class="doc">
+    <p>Los resultados varían y no están garantizados: dependen del esfuerzo, el tiempo y la habilidad de cada persona. Lo que garantizamos es lo que pone en la garantía de esta página.</p>
+    <p>© 2026 Mentorium ECOM S.L. · CIF B19990852 · Via Europa 173, 08301 Mataró · mentoriumacademy.com · <a href="https://mentoriumacademy.com/politica-de-privacidad/">Política de privacidad</a></p>
+  </div>
+</footer>
+</body>
+</html>
